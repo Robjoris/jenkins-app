@@ -8,6 +8,6 @@ export class CartPage {
 
     async expectAProductInTheCart() {
         const amountInCart = await this.page.locator('.js-coolbar-shopping-cart-quantity-count > .badge').textContent();
-        expect(amountInCart).toBe("1");
+        expect(amountInCart?.replace(/\s/g, "")).toEqual("1");
     }
 }
