@@ -1,16 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage("verify tooling") {
-            steps {
-                sh '''
-                  docker version
-                  docker info
-                  docker compose version
-                  curl --version
-                  jp -- version
-                '''
-            }
+        stage("npm") {
+            npm install
+            npm run testCase
         }
     }
 }
