@@ -2,7 +2,6 @@ pipeline {
     agent any
     tools { 
         nodejs "nodePlaywright"
-        docker "docker"
     }
     stages {
       stage('e2e-tests') {
