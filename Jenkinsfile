@@ -10,7 +10,7 @@ pipeline {
                 sh 'npm --version'
                 sh 'npm install -D @playwright/test'
                 sh 'npm run installPlaywright'
-                sh 'npm run playwrightRights'
+//                 sh 'npm run playwrightRights'
                 sh 'npm run testCase'
             }
         }
