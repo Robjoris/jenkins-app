@@ -5,7 +5,7 @@ pipeline {
       stage('e2e-tests') {
          steps {
              sh 'npm install'
-             sh 'npx playwright install'
+             sh 'npx playwright install webkit'
 //              sh 'npx playwright install-deps --dry-run'
              sh 'npx playwright test --project=webkit'
          }
