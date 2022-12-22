@@ -7,7 +7,7 @@ pipeline {
              sh 'npm install'
              sh 'npx playwright install'
 //              sh 'npx playwright install-deps --dry-run'
-             sh 'npx playwright test'
+             sh 'npx playwright test --project=webkit'
          }
       }
    }
