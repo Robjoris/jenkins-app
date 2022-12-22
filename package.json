@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "installPlaywright": "npx playwright install",
+    "installPlaywright": "npx playwright install --with-deps",
     "playwrightRights": "npx playwright install-deps",
     "testCase": "npx playwright test"
   },
