@@ -1,8 +1,12 @@
 pipeline {
-//    agent { docker { image 'mcr.microsoft.com/playwright:v1.29.0-focal' } }
-    agent any
+    agent {
+      docker {
+         image 'ubuntu'
+         args '-u root:sudo -v $HOME/workspace/myproject:/myproject'
+        }
+    }
     tools { nodejs "nodePlaywright" }
-   stages {
+    stages {
       stage('e2e-tests') {
          steps {
              sh 'npm install'
