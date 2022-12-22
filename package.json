@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "installPlaywright": "npx playwright install",
-    "playwrightRights": "sudo npx playwright install-deps",
+    "playwrightRights": "npx playwright install-deps",
     "testCase": "npx playwright test"
   },
   "keywords": [],
