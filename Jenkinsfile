@@ -8,7 +8,7 @@ pipeline {
             steps {
                 sh 'npm install'
                 sh 'npm --version'
-                sh 'npm run installPlaywright'
+                sh 'npm install -D @playwright/test'
                 sh 'npm run testCase'
             }
         }
