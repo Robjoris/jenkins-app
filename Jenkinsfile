@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'ubuntu'
-            args '-u root:sudo -v /var/jenkins/workspace/test automation/'
-        }
-    }
+    agent any
     tools { nodejs "nodePlaywright" }
     stages {
       stage('e2e-tests') {
