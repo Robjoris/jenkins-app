@@ -1,15 +1,6 @@
 pipeline {
-    tools { 
-        nodejs "nodePlaywright"
-        docker "docker"
-          }
-    agent {
-        docker {
-            image 'ubuntu'
-            args '-u root:sudo -v $HOME/workspace/myproject:/myproject'
-        }
-    }
-
+    agent any
+    tools { nodejs "nodePlaywright" }
     
     stages {
         stage("npm") {
